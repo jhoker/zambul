@@ -292,23 +292,23 @@ clear
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "\\E[0;41;36m        Sodosok WS/GRPC Account      \E[0m" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Remarks : ${user}" | tee -a /etc/log-create-user.log
-echo -e "Domain : ${domain}" | tee -a /etc/log-create-user.log
-echo -e "Port TLS : ${tls}" | tee -a /etc/log-create-user.log
-echo -e "Port  GRPC : ${tls}" | tee -a /etc/log-create-user.log
-echo -e "Password : ${uuid}" | tee -a /etc/log-create-user.log
-echo -e "Cipers : aes-128-gcm" | tee -a /etc/log-create-user.log
-echo -e "Network : ws/grpc" | tee -a /etc/log-create-user.log
-echo -e "Path : /ss-ws" | tee -a /etc/log-create-user.log
-echo -e "ServiceName : ss-grpc" | tee -a /etc/log-create-user.log
+echo -e "Remarks 	: ${user}" | tee -a /etc/log-create-user.log
+echo -e "Domain 	: ${domain}" | tee -a /etc/log-create-user.log
+echo -e "Port TLS 	: ${tls}" | tee -a /etc/log-create-user.log
+echo -e "Port  GRPC 	: ${tls}" | tee -a /etc/log-create-user.log
+echo -e "Password 	: ${uuid}" | tee -a /etc/log-create-user.log
+echo -e "Cipers		: aes-128-gcm" | tee -a /etc/log-create-user.log
+echo -e "Network	: ws/grpc" | tee -a /etc/log-create-user.log
+echo -e "Path 		: /ss-ws" | tee -a /etc/log-create-user.log
+echo -e "ServiceName 	: ss-grpc" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Link Ws : ${shadowsockslink}" | tee -a /etc/log-create-user.log
+echo -e "Link Ws 	: ${shadowsockslink}" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Link Grpc : ${shadowsockslink1}" | tee -a /etc/log-create-user.log
+echo -e "Link Grpc 	: ${shadowsockslink1}" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Link JSON : http://${domain}/ss-$user.txt" | tee -a /etc/log-create-user.log
+echo -e "Link JSON 	: http://${domain}/ss-$user.txt" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Expired On : $exp" | tee -a /etc/log-create-user.log
+echo -e "Expired On 	: $exp" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo "" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Press any key to back on menu"
