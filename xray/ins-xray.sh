@@ -331,6 +331,38 @@ cat > /etc/xray/config.json << END
     }
   }
 }
+EOF
+cat <<EOF >etc/xray/config.json << END
+{
+  "log": {
+    "access": "/var/log/xray/access.log",
+    "error": "/var/log/xray/error.log",
+    "loglevel": "info"
+  },
+  "inbounds": [
+    {
+      "port": 31296,
+      "listen": "127.0.0.1",
+      "protocol": "trojan",
+      "tag": "trojanTCP",
+      "settings": {
+        "clients": [],
+        "fallbacks": [
+          {
+            "dest": "31300"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "acceptProxyProtocol": true
+        }
+      }
+    }
+  ]
+}
 END
 rm -rf /etc/systemd/system/xray.service.d
 rm -rf /etc/systemd/system/xray@.service
@@ -508,6 +540,7 @@ wget -O cek-vless "https://raw.githubusercontent.com/sibeesans/ajsc/main/xray/ce
 
 # trojan
 wget -O add-tr "https://raw.githubusercontent.com/sibeesans/ajsc/main/xray/add-tr.sh" && chmod +x add-tr
+wget -O add-tcpgfw "https://raw.githubusercontent.com/sibeesans/ajsc/main/xray/add-tcpgfw.sh" && chmod +x add-tcpgfw
 wget -O trialtrojan "https://raw.githubusercontent.com/sibeesans/ajsc/main/xray/trialtrojan.sh" && chmod +x trialtrojan
 wget -O del-tr "https://raw.githubusercontent.com/sibeesans/ajsc/main/xray/del-tr.sh" && chmod +x del-tr
 wget -O renew-tr "https://raw.githubusercontent.com/sibeesans/ajsc/main/xray/renew-tr.sh" && chmod +x renew-tr
