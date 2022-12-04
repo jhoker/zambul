@@ -1,25 +1,5 @@
 #!/bin/bash
 MYIP=$(curl -sS ipv4.icanhazip.com)
-
-# Color Validation
-DF='\e[39m'
-Bold='\e[1m'
-Blink='\e[5m'
-yell='\e[33m'
-red='\e[31m'
-green='\e[32m'
-blue='\e[34m'
-PURPLE='\e[35m'
-cyan='\e[36m'
-Lred='\e[91m'
-Lgreen='\e[92m'
-Lyellow='\e[93m'
-NC='\e[0m'
-GREEN='\033[0;32m'
-ORANGE='\033[0;33m'
-LIGHT='\033[0;37m'
-# VPS Information
-#Domain
 domain=$(cat /etc/xray/domain)
 #Status certificate
 modifyTime=$(stat $HOME/.acme.sh/${domain}_ecc/${domain}.key | sed -n '7,6p' | awk '{print $2" "$3" "$4" "$5}')
