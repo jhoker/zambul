@@ -476,7 +476,7 @@ sed -i '$ i}' /etc/nginx/conf.d/xray.conf
 
 sleep 1
 echo -e "[ ${green}INFO$NC ] Installing bbr.."
-wget -q -O /usr/bin/bbr "https://raw.githubusercontent.com/jhoker/multi-ws/main/ssh/bbr.sh"
+wget -q -O /usr/bin/bbr "https://raw.githubusercontent.com/jhoker/zambul/main/ssh/bbr.sh"
 chmod +x /usr/bin/bbr
 bbr >/dev/null 2>&1
 rm /usr/bin/bbr >/dev/null 2>&1
