@@ -1,6 +1,5 @@
 #!/bin/bash
 cekray=`cat /root/log-install.txt | grep -ow "XRAY" | sort | uniq`
-
 clear
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
